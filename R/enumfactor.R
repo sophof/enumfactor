@@ -35,3 +35,18 @@ enumfactor.factor <- function(x, indices){
     warning(val)
   return(x)
 }
+
+#' @export
+enumfactor.enumfactor <- function(x,
+                                  levels,
+                                  labels = levels,
+                                  exclude = NA,
+                                  nmax = NA,
+                                  indices){
+  enumfactor.default(as.character(x),
+                     levels,
+                     labels,
+                     exclude,
+                     nmax,
+                     indices)
+}
