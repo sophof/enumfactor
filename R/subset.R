@@ -5,6 +5,6 @@
   attr(y, "indices") <- attr(x, "indices")
   class(y) <- oldClass(x)
   if (drop)
-    enumfactor(y, exclude = if (anyNA(levels(x))) NULL else NA)
+    stop("not yet implemented")
   else y
 }

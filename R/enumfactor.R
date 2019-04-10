@@ -43,10 +43,5 @@ enumfactor.enumfactor <- function(x,
                                   exclude = NA,
                                   nmax = NA,
                                   indices){
-  enumfactor.default(as.character(x),
-                     levels,
-                     labels,
-                     exclude,
-                     nmax,
-                     indices)
+  stop("not yet implemented")
 }
