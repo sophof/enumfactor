@@ -29,3 +29,17 @@ test_that("enumfactor can be made from factor with custom indices", {
   expect_true(is(x, "enumfactor"))
   expect_equal(indices(x), 21:30)
 })
+
+test_that("levels can be get and set", {
+  expect_silent(x <- enumfactor(factor(letters[1:10])))
+  expect_equal(levels(x), letters[1:10])
+  expect_silent(levels(x) <- letters[11:20])
+  expect_equal(levels(x), letters[11:20])
+})
+
+test_that("indices can be get and set", {
+  expect_silent(x <- enumfactor(factor(letters[1:10])))
+  expect_equal(indices(x), 1:10)
+  expect_silent(indices(x) <- 2:11)
+  expect_equal(indices(x), 2:11)
+})
