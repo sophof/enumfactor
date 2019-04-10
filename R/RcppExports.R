@@ -5,3 +5,7 @@ Rcpp_asInteger_Enumfactor <- function(x, indices) {
     .Call(`_enumfactor_Rcpp_asInteger_Enumfactor`, x, indices)
 }
 
+Rcpp_asNumeric_Enumfactor <- function(x, indices) {
+    .Call(`_enumfactor_Rcpp_asNumeric_Enumfactor`, x, indices)
+}
+

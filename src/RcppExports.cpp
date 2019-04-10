@@ -6,20 +6,33 @@
 using namespace Rcpp;
 
 // Rcpp_asInteger_Enumfactor
-NumericVector Rcpp_asInteger_Enumfactor(const NumericVector& x, const NumericVector& indices);
+IntegerVector Rcpp_asInteger_Enumfactor(const NumericVector& x, const IntegerVector& indices);
 RcppExport SEXP _enumfactor_Rcpp_asInteger_Enumfactor(SEXP xSEXP, SEXP indicesSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
-    Rcpp::traits::input_parameter< const NumericVector& >::type indices(indicesSEXP);
+    Rcpp::traits::input_parameter< const IntegerVector& >::type indices(indicesSEXP);
     rcpp_result_gen = Rcpp::wrap(Rcpp_asInteger_Enumfactor(x, indices));
+    return rcpp_result_gen;
+END_RCPP
+}
+// Rcpp_asNumeric_Enumfactor
+NumericVector Rcpp_asNumeric_Enumfactor(const NumericVector& x, const IntegerVector& indices);
+RcppExport SEXP _enumfactor_Rcpp_asNumeric_Enumfactor(SEXP xSEXP, SEXP indicesSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const IntegerVector& >::type indices(indicesSEXP);
+    rcpp_result_gen = Rcpp::wrap(Rcpp_asNumeric_Enumfactor(x, indices));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
     {"_enumfactor_Rcpp_asInteger_Enumfactor", (DL_FUNC) &_enumfactor_Rcpp_asInteger_Enumfactor, 2},
+    {"_enumfactor_Rcpp_asNumeric_Enumfactor", (DL_FUNC) &_enumfactor_Rcpp_asNumeric_Enumfactor, 2},
     {NULL, NULL, 0}
 };
 

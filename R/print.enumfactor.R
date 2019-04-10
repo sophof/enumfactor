@@ -46,7 +46,5 @@ print.enumfactor <- function(x,
         c(ind[1L:max(1, maxl - 1)], "...", if (maxl > 1) ind[n])
         else ind, collapse = colsep), "\n", sep = "")
   }
-  if (!isTRUE(val <- .valid.enumfactor(x)))
-    warning(val)
   invisible(x)
 }
